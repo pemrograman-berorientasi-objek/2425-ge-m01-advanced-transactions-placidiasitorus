@@ -1,11 +1,47 @@
 package fintech.model;
 
 /**
- * @author NIM Nama
- * @author NIM Nama
+ * @author 12S23022 P. Santa Hillary Sitorus
+ * @author 12S23034 Pariama Valentino Sihombing
  */
 public class Account {
 
-    // class definition
+    private String owner;
+    private String accountName;
+    private double balance;
+
+    public Account(String owner, String accountName) {
+        this.owner = owner;
+        this.accountName = accountName;
+        this.balance = 0.0;
+
+    }
+
+    public String getOwner(){
+        return owner;
+    }
+
+    public String getAccountName() {
+        return accountName;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void increaseBalance(double amount) {
+        this.balance += amount;
+    }
+
+    public void decreaseBalance(double amount) {
+        this.balance -= amount;
+    }
+
+
+    @Override
+    public String toString() {
+        return accountName + " | " + owner + " | " + balance;
+
+    }
 
 }
